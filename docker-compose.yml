@@ -32,6 +32,13 @@ services:
       - apps-stable:/var/www/html/custom_apps
       - config-stable:/var/www/html/config
       - data-stable:/var/www/html/data
+  nextcloud-ephemeral-stable:
+    build:
+      context: .
+      args:
+        BRANCH: stable23
+    ports:
+      - "80:80"
   nextcloud-lock:
     build:
       context: .

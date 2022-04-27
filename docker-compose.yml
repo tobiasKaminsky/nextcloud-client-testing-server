@@ -32,6 +32,18 @@ services:
       - apps-stable:/var/www/html/custom_apps
       - config-stable:/var/www/html/config
       - data-stable:/var/www/html/data
+  nextcloud-lock:
+    build:
+      context: .
+      dockerfile: lock.Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - nextcloud-lock:/var/www/html
+      - apps-lock:/var/www/html/custom_apps
+      - config-lock:/var/www/html/config
+      - data-lock:/var/www/html/data
+
 
 volumes:
   nextcloud-master:
@@ -43,3 +55,8 @@ volumes:
   apps-stable:
   config-stable:
   data-stable:
+
+  nextcloud-lock:
+  apps-lock:
+  config-lock:
+  data-lock:

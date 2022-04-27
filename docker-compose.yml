@@ -1,0 +1,45 @@
+version: '2.4'
+
+services:
+  nextcloud-longlived-master:
+    build:
+      context: .
+      args:
+        BRANCH: master
+    ports:
+      - "80:80"
+    volumes:
+      - nextcloud-master:/var/www/html
+      - apps-master:/var/www/html/custom_apps
+      - config-master:/var/www/html/config
+      - data-master:/var/www/html/data
+  nextcloud-ephemeral-master:
+    build:
+      context: .
+      args:
+        BRANCH: master
+    ports:
+      - "80:80"
+  nextcloud-longlived-stable:
+    build:
+      context: .
+      args:
+        BRANCH: stable23
+    ports:
+      - "80:80"
+    volumes:
+      - nextcloud-stable:/var/www/html
+      - apps-stable:/var/www/html/custom_apps
+      - config-stable:/var/www/html/config
+      - data-stable:/var/www/html/data
+
+volumes:
+  nextcloud-master:
+  apps-master:
+  config-master:
+  data-master:
+
+  nextcloud-stable:
+  apps-stable:
+  config-stable:
+  data-stable:

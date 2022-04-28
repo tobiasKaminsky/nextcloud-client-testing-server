@@ -5,5 +5,5 @@ cd $(dirname "$0")
 
 INSTANCE="nextcloud-$1"
 
-docker-compose down --remove-orphans --timeout 5
+./stop.sh
 docker-compose up --detach "$INSTANCE"

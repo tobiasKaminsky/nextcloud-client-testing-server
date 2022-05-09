@@ -12,9 +12,10 @@ services:
     build:
       context: .
       args:
-        BRANCH: stable23
+        BRANCH: stable24
     ports:
       - "80:80"
+    restart: always
     volumes:
       - nextcloud-stable:/var/www/html
       - apps-stable:/var/www/html/custom_apps

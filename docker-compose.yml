@@ -28,17 +28,6 @@ services:
         BRANCH: stable23
     ports:
       - "80:80"
-  nextcloud-lock:
-    build:
-      context: .
-      dockerfile: lock.Dockerfile
-    ports:
-      - "80:80"
-    volumes:
-      - nextcloud-lock:/var/www/html
-      - apps-lock:/var/www/html/custom_apps
-      - config-lock:/var/www/html/config
-      - data-lock:/var/www/html/data
 
 
 volumes:

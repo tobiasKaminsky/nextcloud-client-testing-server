@@ -1,5 +1,5 @@
 # TODO use shallow-server when https://github.com/nextcloud/docker-ci/pull/371/files is merged
-FROM ghcr.io/nextcloud/continuous-integration-server:latest
+FROM ghcr.io/nextcloud/continuous-integration-shallow-server:latest
 
 
 ARG BRANCH="master"
@@ -38,8 +38,5 @@ RUN su www-data -c "php /var/www/html/occ app:enable spreed"
 
 RUN su www-data -c "git clone --depth 1 -b $BRANCH https://github.com/nextcloud/notifications.git /var/www/html/apps/notifications/"
 RUN su www-data -c "php /var/www/html/occ app:enable notifications"
-
-RUN su www-data -c "git clone --depth 1 -b $BRANCH -lock https://github.com/nextcloud/files_lock.git /var/www/html/apps/files_lock/"
-RUN su www-data -c "php /var/www/html/occ app:enable -f files_lock"
 
 ENTRYPOINT /usr/local/bin/run.sh

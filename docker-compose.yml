@@ -25,7 +25,7 @@ services:
     build:
       context: .
       args:
-        BRANCH: stable23
+        BRANCH: stable24
     ports:
       - "80:80"
   nextcloud-talk:

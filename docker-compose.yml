@@ -28,7 +28,7 @@ services:
         BRANCH: stable24
     ports:
       - "80:80"
-  nextcloud-talk:
+  nextcloud-talk-stable:
     build:
       context: .
       dockerfile: talk.Dockerfile
@@ -41,7 +41,14 @@ services:
       - apps-talk:/var/www/html/custom_apps
       - config-talk:/var/www/html/config
       - data-talk:/var/www/html/data
-
+  nextcloud-talk-master:
+    build:
+      context: .
+      dockerfile: talk.Dockerfile
+      args:
+        BRANCH: master
+    ports:
+      - "80:80"
 
 volumes:
   nextcloud-stable:

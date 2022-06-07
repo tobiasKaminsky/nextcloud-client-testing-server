@@ -1,5 +1,4 @@
-# TODO use shallow-server when https://github.com/nextcloud/docker-ci/pull/371/files is merged
-FROM ghcr.io/nextcloud/continuous-integration-server:latest
+FROM ghcr.io/nextcloud/continuous-integration-shallow-server:latest
 
 
 ARG BRANCH="master"

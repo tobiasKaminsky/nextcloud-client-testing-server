@@ -1,3 +1,6 @@
 #!/bin/bash
+set -euo pipefail
 
-grep nextcloud docker-compose.yml | grep ":$" | sed s'/://'g | sed s'/nextcloud-//'g| sort
+cd $(dirname "$0")
+
+yq -r '.services | keys | .[]' < docker-compose.yml  | sed -n 's/^nextcloud-//p' | sort

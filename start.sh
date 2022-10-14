@@ -1,15 +1,11 @@
 #!/bin/bash
-#set -euo pipefail
+set -euo pipefail
 
 cd $(dirname "$0")
 
 INSTANCE="nextcloud-$1"
 
-if [ $# -eq 2 ]; then
-  P=$2 
-else
-  P=80
-fi
+PORT=${2:-80}
 
 ./stop.sh
-PORT="$P" docker-compose up --detach "$INSTANCE"
+PORT="$PORT" docker-compose up --detach "$INSTANCE"

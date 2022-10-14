@@ -2,8 +2,6 @@ version: '2.4'
 
 services:
   nextcloud-ephemeral-master:
-    environment:
-      - PORT
     build:
       context: .
       dockerfile: php7.4.Dockerfile

@@ -2,13 +2,15 @@ version: '2.4'
 
 services:
   nextcloud-ephemeral-master:
+    environment:
+      - PORT
     build:
       context: .
       dockerfile: php7.4.Dockerfile
       args:
         BRANCH: master
     ports:
-      - "80:80"
+      - "${PORT}:80"
   nextcloud-ephemeral-stable16:
     build:
       context: .

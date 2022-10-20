@@ -1,4 +1,4 @@
-FROM ghcr.io/nextcloud/continuous-integration-shallow-server:latest
+FROM ghcr.io/nextcloud/continuous-integration-shallow-server-php7.4:1
 
 
 ARG BRANCH="master"

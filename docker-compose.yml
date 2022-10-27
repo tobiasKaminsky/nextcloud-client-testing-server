@@ -16,7 +16,7 @@ services:
       args:
         BRANCH: stable16
     ports:
-      - "80:80"
+      - "${PORT}:80"
   nextcloud-ephemeral-stable17:
     build:
       context: .
@@ -24,7 +24,7 @@ services:
       args:
         BRANCH: stable17
     ports:
-      - "80:80"
+      - "${PORT}:80"
   nextcloud-ephemeral-stable18:
     build:
       context: .
@@ -32,7 +32,7 @@ services:
       args:
         BRANCH: stable18
     ports:
-      - "80:80"
+      - "${PORT}:80"
   nextcloud-ephemeral-stable19:
     build:
       context: .
@@ -40,7 +40,7 @@ services:
       args:
         BRANCH: stable19
     ports:
-      - "80:80"
+      - "${PORT}:80"
   nextcloud-ephemeral-stable20:
     build:
       context: .
@@ -48,7 +48,7 @@ services:
       args:
         BRANCH: stable20
     ports:
-      - "80:80"
+      - "${PORT}:80"
   nextcloud-ephemeral-stable21:
     build:
       context: .
@@ -56,7 +56,7 @@ services:
       args:
         BRANCH: stable21
     ports:
-      - "80:80"
+      - "${PORT}:80"
   nextcloud-ephemeral-stable22:
     build:
       context: .
@@ -64,7 +64,7 @@ services:
       args:
         BRANCH: stable22
     ports:
-      - "80:80"
+      - "${PORT}:80"
   nextcloud-ephemeral-stable23:
     build:
       context: .
@@ -72,7 +72,7 @@ services:
       args:
         BRANCH: stable23
     ports:
-      - "80:80"
+      - "${PORT}:80"
   nextcloud-ephemeral-stable24:
     build:
       context: .
@@ -80,7 +80,7 @@ services:
       args:
         BRANCH: stable24
     ports:
-      - "80:80"
+      - "${PORT}:80"
   nextcloud-ephemeral-stable25:
     build:
       context: .
@@ -88,7 +88,7 @@ services:
       args:
         BRANCH: stable25
     ports:
-      - "80:80"
+      - "${PORT}:80"
   nextcloud-longlived-stable25:
     build:
       context: .
@@ -96,7 +96,7 @@ services:
       args:
         BRANCH: stable25
     ports:
-      - "80:80"
+      - "${PORT}:80"
     restart: always
     volumes:
       - nextcloud-stable:/var/www/html
@@ -110,7 +110,7 @@ services:
       args:
         BRANCH: stable25
     ports:
-      - "80:80"
+      - "${PORT}:80"
     volumes:
       - nextcloud-talk:/var/www/html
       - apps-talk:/var/www/html/custom_apps
@@ -123,7 +123,7 @@ services:
       args:
         BRANCH: master
     ports:
-      - "80:80"
+      - "${PORT}:80"
 
 volumes:
   nextcloud-stable:

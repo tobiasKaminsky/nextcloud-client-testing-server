@@ -5,5 +5,7 @@ cd $(dirname "$0")
 
 INSTANCE="nextcloud-$1"
 
+PORT=${2:-80}
+
 ./stop.sh
-docker-compose up --detach "$INSTANCE"
+PORT="$PORT" docker-compose up --detach "$INSTANCE"

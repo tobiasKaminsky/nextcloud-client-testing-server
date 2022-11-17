@@ -4,7 +4,6 @@ services:
   nextcloud-ephemeral-master:
     build:
       context: .
-      dockerfile: php7.4.Dockerfile
       args:
         BRANCH: master
     ports:
@@ -84,7 +83,6 @@ services:
   nextcloud-ephemeral-stable25:
     build:
       context: .
-      dockerfile: php7.4.Dockerfile
       args:
         BRANCH: stable25
     ports:
@@ -92,7 +90,6 @@ services:
   nextcloud-longlived-stable25:
     build:
       context: .
-      dockerfile: php7.4.Dockerfile
       args:
         BRANCH: stable25
     ports:

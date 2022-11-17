@@ -1,0 +1,19 @@
+name: "Build images"
+
+on:
+    pull_request:
+        branches: main
+
+permissions: read-all
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        strategy:
+            fail-fast: false
+            matrix:
+                label: [ ephemeral-master, ephemeral-stable25 ]
+        steps:
+            -   uses: actions/checkout@v3
+            -   name: Build docker image ${{ matrix.label }}
+                run: ./rebuild.sh ${{ matrix.label }}

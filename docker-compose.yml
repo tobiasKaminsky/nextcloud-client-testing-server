@@ -1,5 +1,3 @@
-version: '2.4'
-
 services:
   nextcloud-ephemeral-master:
     build:
@@ -14,6 +12,7 @@ services:
       dockerfile: php7.2.Dockerfile
       args:
         BRANCH: stable16
+        BRANCH_MAIN: stable16
     ports:
       - "${PORT}:80"
   nextcloud-ephemeral-stable17:
@@ -22,6 +21,7 @@ services:
       dockerfile: php7.2.Dockerfile
       args:
         BRANCH: stable17
+        BRANCH_MAIN: stable17
     ports:
       - "${PORT}:80"
   nextcloud-ephemeral-stable18:
@@ -30,6 +30,7 @@ services:
       dockerfile: php7.2.Dockerfile
       args:
         BRANCH: stable18
+        BRANCH_MAIN: stable18
     ports:
       - "${PORT}:80"
   nextcloud-ephemeral-stable19:
@@ -38,6 +39,7 @@ services:
       dockerfile: php7.2.Dockerfile
       args:
         BRANCH: stable19
+        BRANCH_MAIN: stable19
     ports:
       - "${PORT}:80"
   nextcloud-ephemeral-stable20:
@@ -46,6 +48,7 @@ services:
       dockerfile: php7.4.Dockerfile
       args:
         BRANCH: stable20
+        BRANCH_MAIN: stable20
     ports:
       - "${PORT}:80"
   nextcloud-ephemeral-stable21:
@@ -54,6 +57,7 @@ services:
       dockerfile: php7.4.Dockerfile
       args:
         BRANCH: stable21
+        BRANCH_MAIN: stable21
     ports:
       - "${PORT}:80"
   nextcloud-ephemeral-stable22:
@@ -62,6 +66,7 @@ services:
       dockerfile: php7.4.Dockerfile
       args:
         BRANCH: stable22
+        BRANCH_MAIN: stable22
     ports:
       - "${PORT}:80"
   nextcloud-ephemeral-stable23:
@@ -70,6 +75,7 @@ services:
       dockerfile: php7.4.Dockerfile
       args:
         BRANCH: stable23
+        BRANCH_MAIN: stable23
     ports:
       - "${PORT}:80"
   nextcloud-ephemeral-stable24:
@@ -78,6 +84,7 @@ services:
       dockerfile: php7.4.Dockerfile
       args:
         BRANCH: stable24
+        BRANCH_MAIN: stable24
     ports:
       - "${PORT}:80"
   nextcloud-ephemeral-stable25:
@@ -85,13 +92,59 @@ services:
       context: .
       args:
         BRANCH: stable25
+        BRANCH_MAIN: stable25
     ports:
       - "${PORT}:80"
+  nextcloud-ephemeral-stable26:
+    build:
+      context: .
+      args:
+        BRANCH: stable26
+        BRANCH_MAIN: stable26
+    ports:
+      - "${PORT}:80"
+  nextcloud-ephemeral-stable27:
+    build:
+      context: .
+      args:
+        BRANCH: stable27
+        BRANCH_MAIN: stable27
+    ports:
+      - "${PORT}:80"
+
+  nextcloud-ephemeral-stable28:
+    build:
+      context: .
+      args:
+        BRANCH: stable28
+        BRANCH_MAIN: stable28
+    ports:
+      - "${PORT}:80"
+
+  nextcloud-ephemeral-stable29:
+    build:
+      context: .
+      args:
+        BRANCH: stable29
+        BRANCH_MAIN: stable29
+    ports:
+      - "${PORT}:80"
+
+  nextcloud-ephemeral-stable30:
+    build:
+      context: .
+      args:
+        BRANCH: stable30
+        BRANCH_MAIN: stable30
+    ports:
+      - "${PORT}:80"
+
   nextcloud-longlived-stable25:
     build:
       context: .
       args:
         BRANCH: stable25
+        BRANCH_MAIN: stable25
     ports:
       - "${PORT}:80"
     restart: always
@@ -106,6 +159,7 @@ services:
       dockerfile: talk.Dockerfile
       args:
         BRANCH: stable25
+        BRANCH_MAIN: stable25
     ports:
       - "${PORT}:80"
     volumes:

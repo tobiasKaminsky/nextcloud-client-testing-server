@@ -25,14 +25,14 @@ RUN su www-data -c "php /var/www/html/occ app:enable text"
 RUN su www-data -c "git clone --depth 1 -b $BRANCH https://github.com/nextcloud/end_to_end_encryption.git /var/www/html/apps/end_to_end_encryption/"
 RUN su www-data -c "php /var/www/html/occ app:enable end_to_end_encryption"
 
-RUN su www-data -c "git clone --depth 1 -b main https://github.com/nextcloud/calendar.git /var/www/html/apps/calendar/"
-RUN su www-data -c "php /var/www/html/occ app:enable calendar"
+# RUN su www-data -c "git clone --depth 1 -b main https://github.com/nextcloud/calendar.git /var/www/html/apps/calendar/"
+# RUN su www-data -c "php /var/www/html/occ app:enable calendar"
 
-RUN su www-data -c "git clone --depth 1 -b $BRANCH https://github.com/nextcloud/deck.git /var/www/html/apps/deck/"
-RUN su www-data -c "php /var/www/html/occ app:enable deck"
+# RUN su www-data -c "git clone --depth 1 -b $BRANCH https://github.com/nextcloud/deck.git /var/www/html/apps/deck/"
+# RUN su www-data -c "php /var/www/html/occ app:enable deck"
 
-RUN su www-data -c "git clone --depth 1 -b $BRANCH https://github.com/nextcloud/spreed.git /var/www/html/apps/spreed/"
-RUN su www-data -c "php /var/www/html/occ app:enable spreed"
+# RUN su www-data -c "git clone --depth 1 -b $BRANCH https://github.com/nextcloud/spreed.git /var/www/html/apps/spreed/"
+# RUN su www-data -c "php /var/www/html/occ app:enable spreed"
 
 RUN su www-data -c "git clone --depth 1 -b $BRANCH https://github.com/nextcloud/notifications.git /var/www/html/apps/notifications/"
 RUN su www-data -c "php /var/www/html/occ app:enable notifications"

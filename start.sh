@@ -7,5 +7,5 @@ INSTANCE="nextcloud-$1"
 
 PORT=${2:-80}
 
-./stop.sh
+# ./stop.sh
 PORT="$PORT" docker-compose up --detach "$INSTANCE"

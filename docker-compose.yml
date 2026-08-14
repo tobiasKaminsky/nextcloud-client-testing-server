@@ -157,6 +157,15 @@ services:
     ports:
       - "${PORT}:80"
 
+  nextcloud-ephemeral-stable33:
+    build:
+      context: .
+      args:
+        BRANCH: stable33
+        BRANCH_MAIN: stable33
+    ports:
+      - "${PORT}:80"
+
   nextcloud-longlived-stable25:
     build:
       context: .
@@ -191,6 +200,15 @@ services:
       dockerfile: talk.Dockerfile
       args:
         BRANCH: master
+    ports:
+      - "${PORT}:80"
+  nextcloud-ci-master:
+    build:
+      context: .
+      dockerfile: ci-master.Dockerfile
+      args:
+        BRANCH: master
+        BRANCH_MAIN: master
     ports:
       - "${PORT}:80"
 

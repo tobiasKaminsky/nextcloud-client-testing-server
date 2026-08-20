@@ -5,4 +5,4 @@ cd $(dirname "$0")
 
 INSTANCE="nextcloud-$1"
 
-docker-compose build --no-cache "$INSTANCE"
+docker compose build --no-cache "$INSTANCE"

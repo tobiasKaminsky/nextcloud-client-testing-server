@@ -166,6 +166,24 @@ services:
     ports:
       - "${PORT}:80"
 
+  nextcloud-ephemeral-stable34:
+    build:
+      context: .
+      args:
+        BRANCH: stable34
+        BRANCH_MAIN: stable34
+    ports:
+      - "${PORT}:80"
+
+  nextcloud-ephemeral-stable35:
+    build:
+      context: .
+      args:
+        BRANCH: stable35
+        BRANCH_MAIN: stable35
+    ports:
+      - "${PORT}:80"
+
   nextcloud-longlived-stable25:
     build:
       context: .
